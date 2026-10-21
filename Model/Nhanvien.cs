@@ -4,7 +4,6 @@
     {
         public int Manv { get; set; }
         public string Tennv { get; set; }
-        public decimal Luong { get; set; }
-        public DateTime Ngaysinh { get; set; }
+        public int Luong { get; set; }
     }
 }
