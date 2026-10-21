@@ -1,16 +1,19 @@
-﻿using Microsoft.AspNetCore.Routing.Template;
+﻿using Microsoft.EntityFrameworkCore;
+using QuanLyNhanVienAPI.Data;
 using QuanLyNhanVienAPI.Model;
-using System.Security.Cryptography.X509Certificates;
+using QuanLyNhanVienAPI.Services;
 
-namespace QuanLyNhanVienAPI.Services
+public class NhanVienServices : INhanVienService
 {
-    class NhanVienServices : INhanVienService
+    private readonly AppDbContext _dbContext;
+    public NhanVienServices(AppDbContext dbContext)
     {
-        public List<Nhanvien> Laydanhsach()
-        {
-            return new List<Nhanvien>();
-        }
+        _dbContext = dbContext;
     }
+
+    public List<Nhanvien> Laydanhsach()
+    {
+        return _dbContext.NhanViens.ToList();
+    }
+
 }
-
-

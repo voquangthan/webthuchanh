@@ -3,7 +3,7 @@ using QuanLyNhanVienAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 ///
-builder.Services.AddScoped<INhanVienService, NhanVienService>();
+builder.Services.AddScoped<INhanVienService, NhanVienServices>();
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -19,7 +19,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-builder.Services.AddTransient<INhanVienService, NhanVienService>();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
