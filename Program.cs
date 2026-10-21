@@ -1,9 +1,17 @@
+﻿using Microsoft.EntityFrameworkCore;
+using QuanLyNhanVienAPI.Data;
 using QuanLyNhanVienAPI.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
-///
+// tạo DI cho controller lấy service
 builder.Services.AddScoped<INhanVienService, NhanVienServices>();
+// tạo DI cho serives lấy db
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")
+    ));
+
 // Add services to the container.
 
 builder.Services.AddControllers();

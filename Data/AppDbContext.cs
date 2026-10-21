@@ -11,6 +11,11 @@ namespace QuanLyNhanVienAPI.Data
 
         }
 
-        public DbSet<Nhanvien> NhanViens { get; set; }
+        public DbSet<Nhanvien> NHANVIEN { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder) //cho maxnv làm khóa chính
+        {
+            modelBuilder.Entity<Nhanvien>().HasKey(nv => nv.Manv);
+        }
+
     }
 }
