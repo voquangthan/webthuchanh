@@ -5,8 +5,17 @@ using QuanLyNhanVienAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 // tạo DI cho controller lấy service
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("React", policy =>
+        policy.WithOrigins("http://localhost:5173")
+              .AllowAnyHeader()
+              .AllowAnyMethod());
+});
 builder.Services.AddScoped<INhanVienService, NhanVienServices>();
 // tạo DI cho serives lấy db
+
+
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection")
@@ -20,7 +29,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-
+app.UseCors("React");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
