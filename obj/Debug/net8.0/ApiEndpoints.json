@@ -10,6 +10,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "QuanLyNhanVienAPI.Controllers.NhanVienController",
+    "Method": "ThemNhanVien",
+    "RelativePath": "api/nhanvien",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nv",
+        "Type": "QuanLyNhanVienAPI.Model.Nhanvien",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuanLyNhanVienAPI.Controllers.NhanVienController",
+    "Method": "Xoanhanvien",
+    "RelativePath": "api/nhanvien",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nv",
+        "Type": "QuanLyNhanVienAPI.Model.Nhanvien",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "QuanLyNhanVienAPI.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

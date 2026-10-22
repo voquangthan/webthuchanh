@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
+using QuanLyNhanVienAPI.Model;
 using QuanLyNhanVienAPI.Services;
 
 namespace QuanLyNhanVienAPI.Controllers
@@ -20,6 +21,24 @@ namespace QuanLyNhanVienAPI.Controllers
         {
             var danhSach = _service.Laydanhsach();
             return Ok(danhSach);
+        }
+        [HttpPost]
+        public IActionResult ThemNhanVien([FromBody] Nhanvien nv)
+        {
+            _service.Themnhanvien(nv);
+            return Ok(nv);
+        }
+        [HttpDelete]
+        public IActionResult Xoanhanvien([FromBody] Nhanvien nv)
+        {
+            _service.Xoanhanvien(nv);
+            return Ok(nv);
+        }
+        [HttpPut]
+        public IActionResult Suanhanvien([FromBody] Nhanvien nv)
+        {
+            _service.Suanhanvien(nv);
+            return Ok(nv);
         }
     }
 }
