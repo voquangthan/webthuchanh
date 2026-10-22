@@ -73,6 +73,35 @@
             "description": "OK"
           }
         }
+      },
+      "put": {
+        "tags": [
+          "NhanVien"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Nhanvien"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Nhanvien"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Nhanvien"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/WeatherForecast": {
