@@ -16,25 +16,30 @@ namespace QuanLyNhanVienAPI.Controllers
             _service = service;
         }
 
+
         [HttpGet]
+        // http lay
         public IActionResult LayDanhSach()
         {
-            var danhSach = _service.Laydanhsach();
-            return Ok(danhSach);
+
+            return Ok(_service.Laydanhsach());
         }
         [HttpPost]
+        //them nhan vien
         public IActionResult ThemNhanVien([FromBody] Nhanvien nv)
         {
             _service.Themnhanvien(nv);
             return Ok(nv);
         }
         [HttpDelete]
+        //xoa
         public IActionResult Xoanhanvien([FromBody] Nhanvien nv)
         {
             _service.Xoanhanvien(nv);
             return Ok(nv);
         }
         [HttpPut]
+        //sua nhan vien
         public IActionResult Suanhanvien([FromBody] Nhanvien nv)
         {
             _service.Suanhanvien(nv);
