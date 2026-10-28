@@ -4,32 +4,30 @@ using QuanLyNhanVienAPI.Services;
 
 public class NhanVienServices : INhanVienService
 {
-    private readonly AppDbContext _dbContext;
+    private readonly AppDbContext _app;
 
-    public NhanVienServices(AppDbContext dbContext)
+    public NhanVienServices(AppDbContext app)
     {
-        _dbContext = dbContext;
+        _app = app;
     }
 
-    public List<Nhanvien> Laydanhsach()
+    public List<Nhanvien> laynhanvien1()
     {
-        return _dbContext.NHANVIEN.ToList();
+        return _app.NHANVIEN.ToList();
     }
-
-    public void Themnhanvien(Nhanvien nv)
+    public void themnhanvien1(Nhanvien n)
     {
-        _dbContext.NHANVIEN.Add(nv);
-        _dbContext.SaveChanges();
+        _app.NHANVIEN.Add(n);
+        _app.SaveChanges();
     }
-
-    public void Xoanhanvien(Nhanvien nv)
+    public void xoanhanvien1(Nhanvien n)
     {
-        _dbContext.NHANVIEN.Remove(nv);
-        _dbContext.SaveChanges();
+        _app.NHANVIEN.Remove(n);
+        _app.SaveChanges();
     }
-    public void Suanhanvien(Nhanvien nv)
+    public void suanhanvien1(Nhanvien nv)
     {
-        _dbContext.NHANVIEN.Update(nv);
-        _dbContext.SaveChanges();
+        _app.NHANVIEN.Update(nv);
+        _app.SaveChanges();
     }
 }

@@ -9,41 +9,33 @@ namespace QuanLyNhanVienAPI.Controllers
     [Route("api/nhanvien1")]
     public class NhanVienController : ControllerBase
     {
-        private readonly INhanVienService _service;
+        private readonly INhanVienService _sv;
 
-        public NhanVienController(INhanVienService service)
+        public NhanVienController(INhanVienService sv)
         {
-            _service = service;
+            _sv = sv;
         }
-
-
         [HttpGet]
-        // http lay
-        public IActionResult LayDanhSach()
+        public IActionResult Laynhanvien()
         {
-
-            return Ok(_service.Laydanhsach());
+            return Ok(_sv.laynhanvien1());
         }
-        [HttpPost]
-        //them nhan vien
-        // dữ li
-        public IActionResult ThemNhanVien([FromBody] Nhanvien nv)
+        [HttpPut]
+        public IActionResult Suanhanvien([FromBody] Nhanvien nv)
         {
-            _service.Themnhanvien(nv);
+            _sv.suanhanvien1(nv);
             return Ok(nv);
         }
         [HttpDelete]
-        //xoa
-        public IActionResult Xoanhanvien([FromBody] Nhanvien nv)
+        public IActionResult Deletenhanvien([FromBody] Nhanvien nv)
         {
-            _service.Xoanhanvien(nv);
+            _sv.xoanhanvien1(nv);
             return Ok(nv);
         }
-        [HttpPut]
-        //sua nhan vien
-        public IActionResult Suanhanvien([FromBody] Nhanvien nv)
+        [HttpPost]
+        public IActionResult them([FromBody] Nhanvien nv)
         {
-            _service.Suanhanvien(nv);
+            _sv.themnhanvien1(nv);
             return Ok(nv);
         }
     }

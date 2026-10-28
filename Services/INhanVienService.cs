@@ -4,9 +4,9 @@ namespace QuanLyNhanVienAPI.Services
 {
     public interface INhanVienService
     {
-        List<Nhanvien> Laydanhsach();
-        void Themnhanvien(Nhanvien nv);
-        void Xoanhanvien(Nhanvien nv);
-        void Suanhanvien(Nhanvien nv);
+        List<Nhanvien> laynhanvien1();
+        void themnhanvien1(Nhanvien nv);
+        void xoanhanvien1(Nhanvien nv);
+        void suanhanvien1(Nhanvien nv);
     }
 }

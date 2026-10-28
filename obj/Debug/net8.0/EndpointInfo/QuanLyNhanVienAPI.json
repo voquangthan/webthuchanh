@@ -45,7 +45,7 @@
           }
         }
       },
-      "delete": {
+      "put": {
         "tags": [
           "NhanVien"
         ],
@@ -74,7 +74,7 @@
           }
         }
       },
-      "put": {
+      "delete": {
         "tags": [
           "NhanVien"
         ],

@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "QuanLyNhanVienAPI.Controllers.NhanVienController",
-    "Method": "LayDanhSach",
+    "Method": "Laydanhsach",
     "RelativePath": "api/nhanvien1",
     "HttpMethod": "GET",
     "IsController": true,
@@ -11,25 +11,9 @@
   },
   {
     "ContainingType": "QuanLyNhanVienAPI.Controllers.NhanVienController",
-    "Method": "ThemNhanVien",
+    "Method": "Themnhanvien",
     "RelativePath": "api/nhanvien1",
     "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "nv",
-        "Type": "QuanLyNhanVienAPI.Model.Nhanvien",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "QuanLyNhanVienAPI.Controllers.NhanVienController",
-    "Method": "Xoanhanvien",
-    "RelativePath": "api/nhanvien1",
-    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -46,6 +30,22 @@
     "Method": "Suanhanvien",
     "RelativePath": "api/nhanvien1",
     "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nv",
+        "Type": "QuanLyNhanVienAPI.Model.Nhanvien",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuanLyNhanVienAPI.Controllers.NhanVienController",
+    "Method": "Xoanhanvien",
+    "RelativePath": "api/nhanvien1",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
