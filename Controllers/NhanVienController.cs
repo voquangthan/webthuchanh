@@ -6,7 +6,7 @@ using QuanLyNhanVienAPI.Services;
 namespace QuanLyNhanVienAPI.Controllers
 {
     [ApiController]
-    [Route("api/nhanvien")]
+    [Route("api/nhanvien1")]
     public class NhanVienController : ControllerBase
     {
         private readonly INhanVienService _service;
@@ -26,6 +26,7 @@ namespace QuanLyNhanVienAPI.Controllers
         }
         [HttpPost]
         //them nhan vien
+        // dữ li
         public IActionResult ThemNhanVien([FromBody] Nhanvien nv)
         {
             _service.Themnhanvien(nv);

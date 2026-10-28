@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/nhanvien": {
+    "/api/nhanvien1": {
       "get": {
         "tags": [
           "NhanVien"

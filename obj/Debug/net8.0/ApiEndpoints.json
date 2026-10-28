@@ -2,7 +2,7 @@
   {
     "ContainingType": "QuanLyNhanVienAPI.Controllers.NhanVienController",
     "Method": "LayDanhSach",
-    "RelativePath": "api/nhanvien",
+    "RelativePath": "api/nhanvien1",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -12,7 +12,7 @@
   {
     "ContainingType": "QuanLyNhanVienAPI.Controllers.NhanVienController",
     "Method": "ThemNhanVien",
-    "RelativePath": "api/nhanvien",
+    "RelativePath": "api/nhanvien1",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -28,7 +28,7 @@
   {
     "ContainingType": "QuanLyNhanVienAPI.Controllers.NhanVienController",
     "Method": "Xoanhanvien",
-    "RelativePath": "api/nhanvien",
+    "RelativePath": "api/nhanvien1",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -44,7 +44,7 @@
   {
     "ContainingType": "QuanLyNhanVienAPI.Controllers.NhanVienController",
     "Method": "Suanhanvien",
-    "RelativePath": "api/nhanvien",
+    "RelativePath": "api/nhanvien1",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
